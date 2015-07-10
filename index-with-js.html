@@ -1,0 +1,17 @@
+    <html>
+    <head>
+        <script src='https://cdn.firebase.com/js/client/2.2.1/firebase.js'></script>
+        <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    </head>
+    <body>
+    <script>
+        var myDataRef = new Firebase('https://gjauaudjwdc.firebaseio-demo.com/');
+
+        myDataRef.on('value', function (snapshot) {
+           console.log("   received value: ", snapshot.val());
+           console.log("toString'ed value: ", snapshot.val().toString());
+        });
+
+    </script>
+    </body>
+    </html>
